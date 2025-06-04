@@ -1,272 +1,284 @@
-
-# Phase 3 Project Description
-
-Congratulations! You've made it through another _intense_ module, and now you're ready to show off your newfound Machine Learning skills
-
-All that remains in Phase 3 is to put your new skills to use with another large project.
-
-In this project description, we will cover:
-
-* Project Overview
-* Deliverables
-* Grading
-* Getting Started
-
-## Project Overview
-
-For this project, you will engage in the full data science process from start to finish, solving a **classification** problem using a **dataset of your choice**.
-
-### Business Problem and Data
-
-It is up to you to define a stakeholder, a business problem, and you are also responsible for choosing a dataset.
-
-For complete details, see [Phase 3 Project - Choosing a Dataset](https://github.com/learn-co-curriculum/dsc-phase-3-choosing-a-dataset).
-
-### Key Points
-
-#### Classification
-
-Recall the distinction between *classification* and *regression* models:
-
- * Classification is used when the target variable is a *category*
- * Regression is used when the target variable is a *numeric value*
-
-(Categorical data may be represented in the data as numbers, e.g. 0 and 1, but they are not truly numeric values. If you're unsure, ask yourself "is a target value of 1 _one more than_ a target value of 0"; if it is one more, that is a regression target, if not, that is a classification target.)
-
-You will have additional opportunities to work on regression problems in later phases, but **for this project, you must be modeling a classification problem**.
-
-#### Findings and Recommendations
-
-In the previous two projects, the framing was primarily *descriptive* and *inferential*, meaning that you were trying to understand the distributions of variables and the relationship between them. For this project you can still use these techniques, but make sure you are also using a ***predictive*** approach.
-
-A predictive *finding* might include:
-
-* How well your model is able to predict the target
-* What features are most important to your model
-
-A predictive *recommendation* might include:
-
-* The contexts/situations where the predictions made by your model would and would not be useful for your stakeholder and business problem
-* Suggestions for how the business might modify certain input variables to achieve certain target results
-
-#### Iterative Approach to Modeling
-
-You should demonstrate an iterative approach to modeling. This means that you must build multiple models. Begin with a basic model, evaluate it, and then provide justification for and proceed to a new model. After you finish refining your models, you should provide 1-3 paragraphs in the notebook discussing your final model.
-
-With the additional techniques you have learned in Phase 3, be sure to explore:
-
-1. Model features and preprocessing approaches
-2. Different kinds of models (logistic regression, decision trees, etc.)
-3. Different model hyperparameters
-
-At minimum you must build two models:
-
-* A simple, interpretable baseline model (logistic regression or single decision tree)
-* A version of the simple model with tuned hyperparameters
-
-#### Classification Metrics
-
-**You must choose appropriate classification metrics and use them to evaluate your models.** Choosing the right classification metrics is a key data science skill, and should be informed by data exploration and the business problem itself. You must then use this metric to evaluate your model performance using both training and testing data.
-
-## Deliverables
-
-There are three deliverables for this project:
-
-* A **non-technical presentation**
-* A **Jupyter Notebook**
-* A **GitHub repository**
-
-### Non-Technical Presentation
-
-Recall that the non-technical presentation is a slide deck presenting your analysis to ***business stakeholders***, and should be presented live as well as submitted in PDF form on Canvas.
-
-We recommend that you follow this structure, although the slide titles should be specific to your project:
-
-1. Beginning
-    - Overview
-    - Business and Data Understanding
-2. Middle
-    - Modeling
-    - **Evaluation**
-3. End
-    - Recommendations
-    - Next Steps
-    - Thank you
-
-Make sure that your discussion of classification modeling is geared towards a non-technical audience! Assume that their prior knowledge of machine learning is minimal. You don't need to explain the details of your model implementations, but you should explain why classification is useful for the problem context. Make sure you translate any metrics or feature importances into their plain language implications.
-
-The graded elements for the non-technical presentation are the same as in [Phase 1](https://github.com/learn-co-curriculum/dsc-phase-1-project-v3#deliverables) and [Phase 2]((https://github.com/learn-co-curriculum/dsc-phase-2-project-v3#deliverables)).
-
-### Jupyter Notebook
-
-Recall that the Jupyter Notebook is a notebook that uses Python and Markdown to present your analysis to a ***data science audience***. You will submit the notebook in PDF format on Canvas as well as in `.ipynb` format in your GitHub repository.
-
-The graded elements for the Jupyter Notebook are:
-
-* Business Understanding
-* Data Understanding
-* Data Preparation
-* Modeling
-* **Evaluation**
-* Code Quality
-
-### GitHub Repository
-
-Recall that the GitHub repository is the cloud-hosted directory containing all of your project files as well as their version history.
-
-The requirements are the same as in [Phase 1](https://github.com/learn-co-curriculum/dsc-phase-1-project-v3#github-repository) and [Phase 2](https://github.com/learn-co-curriculum/dsc-phase-2-project-v3#github-repository), except for the required sections in the `README.md`.
-
-For this project, the `README.md` file should contain:
-
-* Overview
-* Business and Data Understanding
-  * Explain your stakeholder audience and dataset choice here
-* Modeling
-* **Evaluation**
-* Conclusion
-
-Just like in Phase 1 and 2, the `README.md` file should be the bridge between your non technical presentation and the Jupyter Notebook. It should not contain the code used to develop your analysis, but should provide a more in-depth explanation of your methodology and analysis than what is described in your presentation slides.
-
-## Grading
-
-***To pass this project, you must pass each project rubric objective.*** The project rubric objectives for Phase 3 are:
-
-1. ML Communication
-2. Data Preparation for Machine Learning
-3. Nonparametric and Ensemble Modeling
-
-### ML Communication
-
-Recall that communication is one of the key data science "soft skills". In Phase 3, we are specifically focusing on ML Communication. We define ML Communication as:
-
-> Communicate the **performance** of and **insights** generated by machine learning models to diverse audiences via writing, live presentation, and visualization
-
-High-quality ML Communication includes rationale, results, limitations, and recommendations:
-
-* **Rationale:** Explaining why you are using machine learning rather than a simpler form of data analysis
-  * What about the problem or data is suitable for this form of analysis?
-  * For a data science audience, this includes your reasoning for the changes you applied while iterating between models.
-* **Results:** Describing the classification metrics
-  * You can report multiple metrics for a single model, but make sure that indicate a reason for which metrics you are using (and don't try to use all of them at once)
-  * For a business audience, make sure you connect any metrics to real-world implications. You do not need to get into the details of how the model works.
-  * For a data science audience, you don't need to explain what a metric is, but make sure you explain why you chose that particular one.
-* **Limitations:** Identifying the limitations and/or uncertainty present in your analysis
-  * Are there certain kinds of records where model performance is worse? If you used this model in production, what kinds of problems might that cause?
-  * In general, this should be more in-depth for a data science audience and more surface-level for a business audience.
-* **Recommendations:** Interpreting the model results and limitations in the context of the business problem
-  * What should stakeholders _do_ with this information?
-
-#### Exceeds Objective
-
-Communicates the rationale, results, limitations, and specific recommendations generated by a classification model
-
-> See above for an extended explanation of these terms.
-
-#### Meets Objective (Passing Bar)
-
-Successfully communicates model metrics without any major errors
-
-> The minimum requirement is to communicate the _results_, meaning at least one overall model metric for your final model. See the Approaching Objective section for an explanation of what a "major error" means.
-
-#### Approaching Objective
-
-Communicates model metrics with at least one major error
-
-> A major error means that some aspect of your explanation is fundamentally incorrect. For example, if you report a regression metric for a classification model, that would be a major error. Another example would be if you report the model's performance on the training data, rather than the model's performance on the test data.
-
-#### Does Not Meet Objective
-
-Does not communicate model metrics
-
-> It is not sufficient just to display the `classification_report` or confusion matrix for a given model. You need to focus on one or more specific metrics that are important for your business case.
-
-### Data Preparation for Machine Learning
-
-We define this objective as:
-
-> Applying appropriate preprocessing and feature engineering steps to tabular data in preparation for predictive modeling
-
-You still to ensure that you have a strategy for dealing with missing and non-numeric data.
-
-For the Phase 3 project, make sure you also consider:
-
-* **Preventing Data Leakage:** As you prepare data for modeling, make sure that you are correctly applying data preparation techniques so that your model's performance on test data realistically represents how it would perform on unseen data. For scikit-learn transformers specifically, ***make sure that you do not fit the transformer on the test data***. Instead, fit the transformer on the training data and use it to transform both the train and test data.
-* **Scaling:** If you are using a distance-based model algorithm (e.g. kNN or logistic regression with regularization), make sure you scale your data prior to fitting the model.
-
-Feature engineering is encouraged but not required for this project.
-
-#### Exceeds Objective
-
-Goes above and beyond with data preparation, such as feature engineering or using pipelines
-
-> Relevant examples of feature engineering will depend on your choice of dataset and business problem.
-
-> Pipelines are the best-practice approach to data preparation that avoids leakage, but they can get complicated very quickly. We therefore do not recommend that you use pipelines in your initial modeling approach, but rather that you refactor to use pipelines if you have time.
-
-#### Meets Objective (Passing Bar)
-
-Successfully prepares data for modeling, using a final holdout dataset that is transformed by (but not fitted on) transformers used to prepare training data AND scaling data when appropriate
-
-> See the descriptions above for explanations of how to use transformers and scaling.
-
-#### Approaching Objective
-
-Prepares some data successfully, but has at least one major error
-
-> A major error means that some aspect of your data preparation is fundamentally incorrect. Some examples of major errors include: (1) fitting transformers on test data, (2) not performing a train-test split, (3) not scaling data that is used in a distance-based model.
-
-#### Does Not Meet Objective
-
-Does not prepare data for modeling
-
-> This includes projects where data is partially prepared, but the model is unable to run.
-
-### Nonparametric and Ensemble Modeling
-
-Your project should consider the different types of models that have been covered in the course so far and whether they are appropriate or inappropriate for the dataset and business case you are working with.
-
-Your final model can still be a linear model (e.g. logistic regression) but you should explore at least one nonparametric model (e.g. decision tree) as well and articulate why one or the other is a better approach.
-
-#### Exceeds Objective
-
-Goes above and beyond in the modeling process, such as articulating why a given model type is best suited to the problem or correctly using scikit-learn models not covered in the curriculum
-
-> Another way you might go above and beyond would be to create custom Python classes, possibly inheriting from scikit-learn classes.
-
-#### Meets Objective (Passing Bar)
-
-Uses at least two types of scikit-learn model and tunes at least one hyperparameter in a justifiable way without any major errors
-
-> See the "Iterative Approach to Modeling" section above for a more-lengthy explanation.
-
-> Once again, ideally you would include written justifications for each model iteration, but at minimum the iterations must be _justifiable_.
-
-> For an explanation of "major errors", see the description under "Approaching Objective".
-
-#### Approaching Objective
-
-Builds multiple classification models with at least one major error
-
-> A major error means that some aspect of your modeling approach is fundamentally incorrect.
-
-> Once again, the number one major error to avoid is including the target as one of your features. If you are getting metrics that are "too good to be true", make sure that you removed the target (`y`) from your data before fitting the model.
-
-> Other examples of major errors include: using a numeric target value (since this is a classification project), not starting with a baseline model (e.g. proceeding directly to a Random Forest model), or not tuning hyperparameters in a justifiable way (e.g. reducing regularization on a model that is overfitting)
-
-#### Does Not Meet Objective
-
-Does not build multiple classification models
-
-## Getting Started
-
-Please start by reviewing the contents of this project description. If you have any questions, please ask your instructor ASAP.
-
-Once you are ready to begin the project, you will need to complete the Project Proposal.
-
-Recall that more information is available in [Phase 3 Project - Choosing a Dataset](https://github.com/learn-co-curriculum/dsc-phase-3-choosing-a-dataset).
-
-To get started with project development, create a new repository on GitHub. For this project, we recommend that you do not fork the template repository, but rather that you make a new repository from scratch, starting by going to [github.com/new](https://github.com/new).
-
-## Summary
-
-This project is an opportunity to expand your data science toolkit by evaluating, choosing, and working with new datasets. Spending time up front making sure you have a good dataset for a solvable problem will help avoid the major problems that can sometimes derail data science projects. You've got this!
+## Final Project Submission
+
+Please fill out:
+* Student name: Vivian Kwamboka
+* Student pace: full time
+* Scheduled project review date/time: 6/6/2025
+* Instructor name: Samuel Karu
+* Blog post URL:
+
+### Business Understanding
+#### The Business Problem
+SyriaTel, a telecommunications company, is losing customers — they are churning (i.e., canceling service). This leads to loss of revenue, higher customer acquisition costs, and brand damage.
+- Key business question:
+Can we predict which customers area at high risk of churning,so we can take action before they leave?
+#### Business Objective
+Reduce churn rate by:
+- Identifying patterns in customer behavior
+- Predicting customers likely to churn before it happens
+- Enabling the business to act(e.g, offer discounts, improve service,launch campaigns)
+
+#### Business Use Case
+If we can predict churn, SyriaTel can:
+- Proactively reach out to at_risk customers with retention offers
+- Segment customers for better service targeting
+- Improve customer experience by identifying pain points(e.g, high call charges, poor support)
+##### Example Insight:
+If customers without a voice mail plan and high imternational call charges are more likely to churn, SyriaTel can offer them a better plan or discount.
+### Data Understanding
+I will be using the SyriaTel customer dataset, modeling the **churn** based on all other numeric features of the dataset.The target variable churn (1 = customer left, 0 = customer stayed)
+
+# Import necessary libraries for data handling, visualization, modeling, and evaluation:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder, StandardScaler
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import confusion_matrix, classification_report, roc_auc_score, roc_curve
+from sklearn.naive_bayes import GaussianNB
+from imblearn.over_sampling import SMOTE
+
+# Load the dataset and display the first few rows:
+df = pd.read_csv('TelCustomer_Churn.csv')
+df.head()
+# print the shape of the dataset:
+df.shape
+#### Data Preperation
+In this section, I will clean and preprocess the data to ensure it is suitable for modeling. The steps include:
+- Removing columns with missing or irrelevant values
+- Encoding categorical variables into numeric format
+- Converting the target variable to integer type
+- Splitting the dataset into features and target variable
+- Dividing the data into training and testing sets
+
+These steps help improve model performance and ensure accurate predictions.
+# Data Cleaning
+# Keep only columns with no missing values
+df = df.dropna(axis=1, how='any')
+df.head()
+# Drop irrelevant columns
+df = df.drop(columns=['phone number', 'state'])
+# Encode categorical variables with Label Encoder and display unique values:
+le = LabelEncoder()
+df['international plan'] = le.fit_transform(df['international plan'])
+df['voice mail plan'] = le.fit_transform(df['voice mail plan'])
+# print the values of the encoded columns
+print("International Plan Encoded Values:", df['international plan'].unique())
+print("Voice Mail Plan Encoded Values:", df['voice mail plan'].unique())
+# convert the target variable 'churn' to integers
+df['churn'] = df['churn'].astype(int)
+
+# Split the dataset into features and target variable
+X = df.drop(columns=['churn'], axis=1)
+y = df['churn']
+#### Modelling
+I will apply the Logistic Regression predictive model as it is simple and interpretable model suitable for binary classification.
+
+ I will also perform a train-test split(80% training, 20% test)so that i will be fitting the model using the training dataset and evaluating the model using the testing dataset.
+
+The performance will be evaluated using:
+- Accuracy
+- Precision, Recall, F1-Score
+- Confusion Matrix
+- ROC AUC Score
+- ROC Curve
+# Feature scaling (Important for convergence in logistic regression)
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+# Split the dataset into training and testing sets using train_test_split():
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+# Train a logistic regression model
+model = LogisticRegression(max_iter=5000, solver='liblinear')
+model.fit(X_train, y_train)
+# Make predictions on the test set and calculate probabilities:
+y_pred= model.predict(X_test)
+y_proba = model.predict_proba(X_test)[:, 1]
+# Evaluate the model
+print('Logistic Regression Model Evaluation with SMOTE')
+print('classification_report:\n', classification_report(y_test, y_pred))
+print('confusion_matrix:\n', confusion_matrix(y_test, y_pred))
+# Calculate ROC AUC score
+roc_auc = roc_auc_score(y_test, y_proba)
+print('ROC AUC Score:', roc_auc)
+# Plot ROC curve
+fpr, tpr, thresholds = roc_curve(y_test, y_proba)
+plt.figure(figsize=(8, 6))
+plt.plot(fpr, tpr, color='green', label='ROC Curve (area = :%.2f)' % roc_auc)
+plt.plot([0, 1], [0, 1], color='red', linestyle='--')
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('Receiver Operating Characteristic Curve')
+plt.grid(True)
+plt.legend(loc="lower right")
+plt.tight_layout()
+plt.show()
+#### Evaluation Summary
+**Precision** for class **1** is 0.57 meaning that 57% of the predicted churns were correct which isn't bad, but many false positives also existed.
+
+ **Recall** for class **1** is 0.12 which means that the model caught 12% of actual churners ,missing most of them.
+
+The **F1 Score** of 0.20 is too low probably because of the poor Recall
+
+ **Confusion Matrix**
+- True Negatives = 557 (correctly predicted stay)
+- False Positives = 9 (predicted churn, actually stayed)
+- False Negatives = 89 (missed churners)
+- True Positives = 12 (correctly predicted churn)
+
+ So the model does well at predicting those who won't churn but poorly at catching who will.
+
+**Accuracy**
+Overall correct predictions is 85% but this is misleading since the dataset is imbalanced(most people stay)
+#### Improving Recall with SMOTE
+
+The initial logistic regression model showed low recall for the minority class (churners), meaning it missed many actual churn cases. This is often due to class imbalance, where the number of non-churners greatly exceeds churners
+
+To address this, we can use **SMOTE** (Synthetic Minority Over-sampling Technique), which generates synthetic samples for the minority class in the training data. By balancing the classes, SMOTE helps the model better learn patterns associated with churners, potentially improving recall.
+
+**Steps:**
+- Apply SMOTE to the training set to create a balanced dataset.
+- Retrain the model on the resampled data.
+- Evaluate recall and other metrics to check for improvement.
+
+SMOTE is a powerful technique for imbalanced classification problems, especially when the goal is to identify as many positive cases (churners) as possible.
+# Apply SMOTE to handle class imbalance
+smote = SMOTE(random_state=42)
+X_resampled, y_resampled = smote.fit_resample(X_train, y_train)
+# Logistic Regression with SMOTE
+model_smote = LogisticRegression(max_iter=5000, solver='liblinear')
+model_smote.fit(X_resampled, y_resampled)
+# Make predictions on the test set with SMOTE
+y_pred_smote = model_smote.predict(X_test)
+y_proba_smote = model_smote.predict_proba(X_test)[:, 1]
+# Evaluate the model with SMOTE
+print('Logistic Regression Model Evaluation with SMOTE')
+print('classification_report:\n', classification_report(y_test, y_pred_smote))
+print('confusion_matrix:\n', confusion_matrix(y_test, y_pred_smote))
+# Calculate ROC AUC score
+roc_auc_smote = roc_auc_score(y_test, y_proba_smote)
+print('ROC AUC Score:', roc_auc_smote)
+#### Why Use Naive Bayes with SMOTE?
+
+Naive Bayes is a simple yet effective classification algorithm, especially suitable for high-dimensional datasets and when features are (mostly) independent. However, like many classifiers, its performance can be significantly affected by class imbalance—when one class (such as "churn") is much less frequent than the other.
+
+**SMOTE** (Synthetic Minority Over-sampling Technique) addresses this issue by generating synthetic samples for the minority class, balancing the dataset. By combining Naive Bayes with SMOTE, we can:
+
+- Provide the Naive Bayes model with a more balanced training set, helping it better learn the characteristics of the minority class (churners).
+- Improve recall and F1-score for the minority class, making the model more effective at identifying customers likely to churn.
+- Reduce bias toward the majority class, leading to more reliable predictions.
+
+This approach is particularly useful when the business goal is to identify as many churners as possible, even at the cost of some false positives.
+# Naive Bayes with SMOTE
+model_nb = GaussianNB()
+# Fit the model on the resampled data
+model_nb.fit(X_resampled, y_resampled)
+# Make predictions on the test set with Naive Bayes
+y_pred_nb = model_nb.predict(X_test)
+y_proba_nb = model_nb.predict_proba(X_test)[:, 1]
+# Evaluate the Naive Bayes model
+print('Naive Bayes Model Evaluation with SMOTE')
+print('classification_report:\n', classification_report(y_test, y_pred_nb))
+print('confusion_matrix:\n', confusion_matrix(y_test, y_pred_nb))
+# Calculate ROC AUC score for Naive Bayes
+roc_auc_nb = roc_auc_score(y_test, y_proba_nb)
+print('ROC AUC Score:', roc_auc_nb)
+# Plot ROC Curve for all models
+fpr, tpr, _ = roc_curve(y_test, y_proba)
+fpr_smote, tpr_smote, _ = roc_curve(y_test, y_proba_smote)
+fpr_nb, tpr_nb, _ = roc_curve(y_test, y_proba_nb)
+
+plt.figure(figsize=(10, 8))
+plt.plot(fpr, tpr, color='blue', label='Logistic Regression(No SMOTE) (AUC = %.2f)' % roc_auc)
+plt.plot(fpr_smote, tpr_smote, color='green', label='Logistic Regression(SMOTE) (AUC = %.2f)' % roc_auc_smote)
+plt.plot(fpr_nb, tpr_nb, color='red', label='Naive Bayes(SMOTE) (AUC = %.2f)' % roc_auc_nb)
+plt.plot([0, 1], [0, 1], color='black', linestyle='--')
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('ROC Curve Comparison')
+plt.legend(loc='lower right')
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
+#### Hyperparameter Tuning for Logistic Regression
+we'll use **GridSearchCV** to try different hyperparameters.
+# apply grid search for hyperparameter tuning
+from sklearn.model_selection import GridSearchCV
+
+# Define parameter grid
+param_grid = {
+    'C': [0.01, 0.1, 1, 10],
+    'penalty': ['l1', 'l2'],
+    'solver': ['liblinear', 'saga']
+}
+
+# Initialize logistic regression
+logreg = LogisticRegression(max_iter=5000)
+
+# Grid Search with 5-fold cross-validation
+grid_search = GridSearchCV(logreg, param_grid, scoring='recall', cv=5, n_jobs=-1)
+grid_search.fit(X_resampled, y_resampled)
+
+# Best model
+best_logreg = grid_search.best_estimator_
+y_pred_best = best_logreg.predict(X_test)
+y_proba_best = best_logreg.predict_proba(X_test)[:, 1]
+
+# Evaluation
+print("Best Logistic Regression Parameters:", grid_search.best_params_)
+print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred_best))
+print("Classification Report:\n", classification_report(y_test, y_pred_best))
+print("ROC AUC Score:", roc_auc_score(y_test, y_proba_best))
+
+#### Why Use Threshold Adjustment?
+
+In classification problems, models typically use a default probability threshold of 0.5 to decide between classes. However, this may not provide the best balance between **precision** (how many predicted churns are correct) and **recall** (how many actual churners are identified), especially with imbalanced datasets.
+
+By adjusting the decision threshold, we can:
+- Increase recall (catch more churners) at the expense of precision, or vice versa, depending on business needs.
+- Find an optimal trade-off that aligns with business goals, such as minimizing false negatives (missed churners) or false positives (incorrectly flagged churners).
+- Improve the F1-score, which balances both precision and recall.
+
+Threshold tuning is especially useful when the cost of missing a churner is much higher than incorrectly predicting churn, allowing for more effective and actionable predictions.
+# Threshhold tuning to balance precision and recall
+from sklearn.metrics import precision_recall_curve, f1_score
+
+# Step 1: Predict probabilities
+y_probs = best_logreg.predict_proba(X_test)[:, 1]  # Get probability for class 1 (churn)
+
+# Step 2: Compute precision, recall, thresholds
+precision, recall, thresholds = precision_recall_curve(y_test, y_probs)
+
+# Step 3: Find best threshold by F1-score (or manually inspect)
+f1_scores = 2 * (precision * recall) / (precision + recall + 1e-8)
+best_idx = f1_scores.argmax()
+best_threshold = thresholds[best_idx]
+
+print(f"Best Threshold: {best_threshold:.2f}")
+print(f"F1-Score at Best Threshold: {f1_scores[best_idx]:.2f}")
+
+# Step 4: Use this new threshold for final prediction
+y_pred_thresholded = (y_probs >= best_threshold).astype(int)
+
+# Step 5: Evaluate
+print("Classification Report (adjusted threshold):")
+print(classification_report(y_test, y_pred_thresholded))
+print("Confusion Matrix:")
+print(confusion_matrix(y_test, y_pred_thresholded))
+print("ROC AUC Score (adjusted threshold):", roc_auc_score(y_test, y_probs))
+
+# create submission dataframe
+predictions = pd.DataFrame({
+    'customer_id': y_test.index, 
+    'predicted_churn': y_pred_thresholded
+})
+# Display the first few rows of the predictions dataframe
+predictions.head()
+# Save to CSV
+predictions.to_csv('customer_churn_predictions.csv', index=False)
